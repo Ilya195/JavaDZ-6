@@ -2,16 +2,14 @@ package ru.netology.javamvn.services;
 
 public class SQRService {
 
-    int x = 150;
-    int y = 300;
 
-    public int SqrService(int x, int y) {
-        for (int i = 10; i < 99; i ++)
-            if (x <= i * i && i * i <= y) {
-                {
-                    return i;
-                }
+    public int SqrService(int minSqr, int maxSqr) {
+        int min = 0;
+        for (int i = 0; i < 99; i++)
+            if (minSqr <= i * i && i * i <= maxSqr) {
+                min += 1;
+                continue;
             }
-        return -1;
+        return min;
     }
 }
